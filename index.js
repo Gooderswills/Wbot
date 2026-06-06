@@ -27,8 +27,10 @@ app.command("/wbot-help", async ({ ack, respond }) => {
     text:
 `Available Commands:
 /wbot-ping - Check bot latency
-/wbot-catfact - Get a cat fact
-/wbot-joke - Get a random joke`
+/wbot-help - Show this message
+/wbot-catfact - Get a random cat fact
+/wbot-joke - Get a random joke
+/wbot-roll [number] - Roll a dice (defaults to 6 sides)`
   });
 });
 
@@ -57,4 +59,20 @@ ${response.data.punchline}`
   } catch (err) {
     await respond({ text: "Failed to fetch a joke." });
   }
+});
+
+app.command("/wbot-roll", async ({ command, ack, respond }) => {
+  await ack();
+
+
+  const sides = parseInt(command.text) || 6;
+  
+
+  if (sides <= 0) {
+    await respond({ text: "Please provide a valid number greater than 0!" });
+    return;
+  }
+
+  const result = Math.floor(Math.random() * sides) + 1;
+  await respond({ text: `You rolled a d${sides} and got a *${result}* 🎲` });
 });
