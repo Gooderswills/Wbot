@@ -2,15 +2,16 @@ My Slack Bot for Stardance
 
 To use go into the hack club slack and do /wbot
 
-Available Commands:
-/wbot-ping - Check bot latency
+**Available Commands:**
 
-/wbot-help - Show this message
+**/wbot-ping** - Check bot latency
 
-/wbot-catfact - Get a random cat fact
+**/wbot-help** - Show this message
 
-/wbot-joke - Get a random joke
+**/wbot-catfact** - Get a random cat fact
 
-/wbot-roll [number] - Roll a dice (defaults to 6 sides)
+**/wbot-joke** - Get a random joke
 
-Transparency - I used ai to generate some of the commands as I do not know Javascript
+**/wbot-roll [number]** - Roll a dice (defaults to 6 sides)
+
+**Transparency** - I used ai to generate some of the commands as I do not know Javascript
